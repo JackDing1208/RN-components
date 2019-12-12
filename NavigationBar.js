@@ -15,7 +15,6 @@ import {
 import {NavigationActions} from "react-navigation"
 import SafeAreaView from "react-native-safe-area-view"
 import DeviceInfo from "react-native-device-info"
-import theme from "../config/theme"
 import StatusBarComponent from "./StatusBarComponent"
 import LocalSVGIcon from "./LocalSvg"
 
