@@ -7,8 +7,8 @@ React Native 工程中安卓环境不支持直接读取SVG文件，相关组件�
 - iconURI直接填写对应的URI即可
 - 增加本地缓存机制避免重复在线加载
 
-```
-<DeviceSVGIcon
+``` javascript
+<DeviceSVG
   width={50}
   height={50}
   color={"pink"}
@@ -23,12 +23,12 @@ React Native 工程中安卓环境不支持直接读取SVG文件，相关组件�
 ![svgIndex](./Image/example/svgIndex.jpg)
 
 
-```
-<LocalSVGIcon
-icon={"icon_back"}
-height={14}
-width={14}
-color={"#FF4D4F"}
+``` javascript
+<LocalSVG
+  icon={"icon_back"}
+  height={14}
+  width={14}
+  color={"#FF4D4F"}
 />
 ```
 
@@ -36,9 +36,9 @@ color={"#FF4D4F"}
 项目中各种常见形式的带遮罩的二级弹窗
 
 ### input
-![svgIndex](./Image/example/topToast.gif)
+![svgIndex](./Image/example/input.gif)
 
-```
+``` javascript
 import Modal, {ModalType} from ".components/Modal"
 <Modal
   display={this.state.showInput}
