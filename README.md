@@ -22,6 +22,7 @@ React Native 工程中安卓环境不支持直接读取SVG文件，相关组件�
 - icon属性直接填写svgIndex中的key值即可
 ![svgIndex](./Image/example/svgIndex.jpg)
 
+
 ```
 <LocalSVGIcon
 icon={"icon_back"}
@@ -33,7 +34,29 @@ color={"#FF4D4F"}
 
 ## 2、Modal相关
 项目中各种常见形式的带遮罩的二级弹窗
-### alert
-```
 
+### input
+![svgIndex](./Image/example/topToast.gif)
+
+```
+import Modal, {ModalType} from ".components/Modal"
+<Modal
+  display={this.state.showInput}
+  type={ModalType.input}
+  option={{
+    content: "请输入设备名称",
+    defaultValue: this.state.nickName,
+    confirm: {
+      title: "确认",
+      titleStyle: {
+        color: "rgba(43, 140, 249, 1.00)",
+      },
+      onPress: this._editDeviceName,
+    },
+    cancel: {
+      title: "跳过",
+      onPress: this._skipTheStep
+    },
+  }}
+/> 
 ```
