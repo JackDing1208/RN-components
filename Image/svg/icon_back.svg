@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>icon_back</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(10.000000, 10.000000) scale(1, -1) translate(-10.000000, -10.000000) " fill-rule="nonzero">
+            <rect id="Rectangle" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+            <path d="M5.7448,10 C5.7448,9.7324 5.847,9.4648 6.0508,9.2608 L12.4708,2.841 C12.8792,2.4326 13.5412,2.4326 13.9494,2.841 C14.3576,3.2492 14.3576,3.9112 13.9494,4.3196 L8.2688,10 L13.9492,15.6804 C14.3574,16.0886 14.3574,16.7508 13.9492,17.159 C13.541,17.5674 12.879,17.5674 12.4706,17.159 L6.0506,10.7392 C5.8468,10.5352 5.7448,10.2676 5.7448,10 Z" id="Path" fill="#183B56"></path>
+        </g>
+    </g>
+</svg>
