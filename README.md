@@ -36,7 +36,7 @@ React Native 工程中安卓环境不支持直接读取SVG文件，相关组件�
 项目中各种常见形式的带遮罩的二级弹窗
 
 ### input
-![svgIndex](./Image/example/input.gif)
+![inputModal](./Image/example/input.gif)
 
 ``` javascript
 import Modal, {ModalType} from ".components/Modal"
@@ -59,4 +59,64 @@ import Modal, {ModalType} from ".components/Modal"
     },
   }}
 /> 
+```
+
+### confirm
+![confirmModal](./Image/example/input.gif)
+
+``` javascript
+import Modal, {ModalType} from ".components/Modal"
+<Modal
+  type={ModalType.confirm}
+  display={this.state.showConfirmModal}
+  option={{
+    title: this.modalConfig.title,
+    content: this.modalConfig.content,
+    confirm: {
+      title: global.I18n.t("NetConnecting_ModalButton_Confirm"),
+      titleStyle: {
+        backgroundColor: global.config.theme.basic.mainColor,
+        color: "#fff",
+      },
+      onPress: this.hideConfirmModal,
+    },
+    cancel: {
+      title: global.I18n.t("NetConnecting_ModalButton_Cancel"),
+      titleStyle: {
+        backgroundColor: "#F5F5F5",
+        color: "#183B56",
+      },
+      onPress: this.hideConfirmModal,
+    },
+  }}
+/>
+```
+
+## 2、Toast相关
+项目中常用的选项弹窗
+
+### BottomToastOption
+![ToastOption](./Image/example/bottomToast.gif)
+- display一般由页面的state维护
+- setIndex对应选择后的后调函数，会将用户选择的index自动传参
+- optionList对应选项内容
+- title和cancel可以根据需要自行添加
+```javascript
+import BottomToastOption from "../../components/BottomToastOption"
+<BottomToastOption
+  display={this.state.showRoleToast}
+  setIndex={this.setOptionIndex}
+  optionList={[
+    {
+      text: "管理员",
+      value: 7,
+    },
+    {
+      text: "普通用户",
+      value: 6666,
+    },
+  ]}
+  title={"角色设定"}
+  cancel={true}
+/>
 ```
