@@ -1,5 +1,5 @@
 # *RN-components*
-所有组件可直接复制到工程中安装相应依赖后直接import使用
+生产环境中实际使用可将组件复制到工程中安装相应依赖后直接import使用，方便后续开发，并且根据需要修改
 ## 1、SVG相关
 React Native 工程中安卓环境不支持直接读取SVG文件，相关组件基于react-native-svg-uri和react-native-svg封装开发
 ### OnlineSvg
@@ -62,7 +62,7 @@ import Modal, {ModalType} from ".components/Modal"
 ```
 
 ### confirm
-![confirmModal](./Image/example/input.gif)
+![confirmModal](./Image/example/confirm.gif)
 
 ``` javascript
 import Modal, {ModalType} from ".components/Modal"
@@ -92,7 +92,17 @@ import Modal, {ModalType} from ".components/Modal"
 />
 ```
 
-## 2、Toast相关
+### loading
+![loadingModal](./Image/example/loading.gif)
+
+``` javascript
+<Modal
+  display={this.state.isShowLoading}
+  type={ModalType.loading}
+/>
+```
+
+## 3、Toast相关
 项目中常用的选项弹窗
 
 ### BottomToastOption
@@ -101,7 +111,7 @@ import Modal, {ModalType} from ".components/Modal"
 - setIndex对应选择后的后调函数，会将用户选择的index自动传参
 - optionList对应选项内容
 - title和cancel可以根据需要自行添加
-```javascript
+``` javascript
 import BottomToastOption from "../../components/BottomToastOption"
 <BottomToastOption
   display={this.state.showRoleToast}
@@ -119,4 +129,15 @@ import BottomToastOption from "../../components/BottomToastOption"
   title={"角色设定"}
   cancel={true}
 />
+```
+
+### TopOption
+![TopToast](./Image/example/topToast.gif)
+- 为方便使用封装在NavigationBar内部,直接通过DeviceEventEmitter触发
+``` javascript
+import {DeviceEventEmitter} from "react-native"
+const toastConfig = {
+  text: "弹出的文本内容",
+}
+DeviceEventEmitter.emit("showNavigationToast", toastConfig)
 ```
