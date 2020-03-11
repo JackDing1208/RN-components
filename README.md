@@ -141,3 +141,12 @@ const toastConfig = {
 }
 DeviceEventEmitter.emit("showNavigationToast", toastConfig)
 ```
+
+### Vbutton
+![Vbutton](./Image/example/vbutton.gif)
+
+### 柱状图
+![Vbutton](./Image/example/barChart.gif)
+
+### 折线图
+![Vbutton](./Image/example/lineChart.gif)
